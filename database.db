@@ -1,0 +1,4 @@
+{"campo":"teoria","argomento":"disequazioni","strutturaDato":{"testo":"<h3> Prima spiegazione di teoria</h3>\n<p>Questa e la prima spiegazione di teoria</p>"},"indice":1,"_id":"1lW5lw7vGlJsnY6x"}
+{"campo":"teoria","argomento":"disequazioni","strutturaDato":{"testo":"<h3> terzo spiegazione di teoria</h3>\n<p>proviamo Una formula non in-line $$ x=\\frac{x}{(2x-1)}$$</p>"},"indice":2,"_id":"NJw2HJfPGQsB4gD0"}
+{"campo":"teoria","argomento":"disequazioni","strutturaDato":{"testo":"<h3> Secondo spiegazione di teoria</h3>\n<p>mettiamo una formula in line \\( f(x)\\)</p>"},"indice":0,"_id":"uoXttB6eD5IMf4UR"}
+{"campo":"verofalso","argomento":"disequazioni","strutturaDato":{"testo":"vero o falso","risposta":true},"indice":0,"_id":"caGHSnNQTevEiamZ"}

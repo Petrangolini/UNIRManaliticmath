@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>Matematica interattiva</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="./css/indexStyle.css">
+    <link rel="stylesheet" href="./css/mioStyle.css">
+    
+    <!--JQUERY-->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+        });
+      </script>
+
+      <!--Animate Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+
+    <!--Taggle Button-->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
+
+
+     
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+            <div class="sidebar-header" id="sidebarCollapse">
+                    <h3>UNIRSM</h3>
+            </div>
+            
+           
+
+      
+        </div>
+    </nav>
+        
+
+
+    <div class="wrapper">
+
+            
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+         
+
+            <ul class="list-unstyled components">
+                
+                <li>
+                    <a href="#disequazioni" class="argomento" data-argomento="disequazioni" data-toggle="collapse">Disequazioni</a>
+                    <div id="disequazioni" class="collapse" >
+
+                            <ul class="list-unstyled ">
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="teoria">Teoria</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="esercizi">Esercizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="campo" data-campo="verofalso">Vero o Falso</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="multipla">Risposta Multipla</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="campo" data-campo="multipla">Grafici</a>
+                                    </li>
+                                </ul>
+
+                    </div>
+                </li>
+                <li>
+                    <a href="#topologia" class="argomento" data-argomento="topologia" data-toggle="collapse">Topologia</a>
+                    <div id="topologia" class="collapse">
+
+                            <ul class="list-unstyled ">
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="teoria">Teoria</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="esercizi">Esercizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="campo" data-campo="verofalso">Vero o Falso</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="multipla">Risposta Multipla</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="campo" data-campo="multipla">Grafici</a>
+                                    </li>
+                                </ul>
+                            </div>
+                </li>
+                <li>
+                    <a href="#funzioni" class="argomento" data-argomento="funzioni" 
+                    data-toggle="collapse">Funzioni</a>
+                    <div id="funzioni" class="collapse">
+
+                            <ul class="list-unstyled ">
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="teoria">Teoria</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="esercizi">Esercizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="campo" data-campo="verofalso">Vero o Falso</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="multipla">Risposta Multipla</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="campo" data-campo="multipla">Grafici</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                </li>
+                <li>
+                    <a href="#equivalenze" class="argomento" data-argomento="equivalenze"
+                     data-toggle="collapse">Equivalenze </a>
+                    <div id="equivalenze" class="collapse">
+
+                            <ul class="list-unstyled ">
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="teoria">Teoria</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="esercizi">Esercizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="campo" data-campo="verofalso">Vero o Falso</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="multipla">Risposta Multipla</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="campo" data-campo="multipla">Grafici</a>
+                                    </li>
+                                </ul>
+                            </div>
+                </li>
+                <li>
+                    <a href="#limiti" class="argomento" data-argomento="limiti"
+                     data-toggle="collapse">Limiti</a>
+                    <div id="limiti" class="collapse">
+
+                            <ul class="list-unstyled ">
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="teoria">Teoria</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="esercizi">Esercizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="campo" data-campo="verofalso">Vero o Falso</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="multipla">Risposta Multipla</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="campo" data-campo="multipla">Grafici</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                </li>
+                <li>
+                    <a href="#derivate" class="argomento" data-argomento="derivate" data-toggle="collapse">Derivate</a>
+                    <div id="derivate" class="collapse">
+
+                            <ul class="list-unstyled ">
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="teoria">Teoria</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="esercizi">Esercizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="campo" data-campo="verofalso">Vero o Falso</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="multipla">Risposta Multipla</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="campo" data-campo="multipla">Grafici</a>
+                                    </li>
+                                </ul>
+                            </div>
+                </li>
+                <li>
+                    <a href="#integrali" class="argomento" data-argomento="integrali" data-toggle="collapse">Integrali</a>
+                    <div id="integrali" class="collapse">
+
+                            <ul class="list-unstyled ">
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="teoria">Teoria</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="esercizi">Esercizi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="campo" data-campo="verofalso">Vero o Falso</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="campo" data-campo="multipla">Risposta Multipla</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="campo" data-campo="multipla">Grafici</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                </li>
+
+            </ul>
+
+            
+        </nav>
+
+
+
+
+        <script>
+       
+  
+        $('.campo').on('click',function(){
+            $('.attivo').removeClass('attivo');
+
+            $(this).addClass('attivo');
+
+            
+            datiUtili.campo=$(this).data('campo');
+            datiUtili.argomento= $(this).closest('div').attr('id');
+
+            let sendData={
+
+                campo:datiUtili.campo,
+                argomento:datiUtili.argomento
+
+            };
+            
+            //nascondo tutti gli insert
+            $('.insert').css('display','none');
+            // cancellare tutti i contenuti di
+            switch (sendData.campo){
+                case "teoria":
+                    //cosa deve fare
+                    $('#nomeArgomento').html(sendData.argomento.toLocaleLowerCase());
+           
+                    $('#inserisciTeoria').css('display','block');
+                
+           
+                    
+                    break;
+                case "verofalso":
+                    
+                    $('#inserisciVeroFalso').css('display','block');
+                    break;
+                case "multipla":
+                    
+                    $('#inserisciMultipla').css('display','block');
+                    break;
+                default:
+                    break;
+            }
+
+            //alla fine  tutto ritorna visibile
+            $('#editfield').css('display','block');
+                     
+
+            // Messaggio
+
+
+            
+            options={
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                        },
+                    body:JSON.stringify(sendData)
+                }
+
+                fetch('/dammidati',options).then((data)=>{                   
+                                return data.json();
+                                        }
+                    ).then((queryresult)=>{
+
+                        // switch case
+                        console.log(queryresult);
+                        datiUtili.datiMostrati=queryresult;
+                         //prima Svuoto
+                         $('#ulDomande').empty();
+                       
+                         datiUtili.datiMostrati.sort((a,b)=>{
+                             return a.indice-b.indice;
+                         });
+                        // da qui perche sono le domande di teoria
+                        datiUtili.datiMostrati.map(
+                            (ele,i)=>{
+                                visualizza(ele);
+                               
+                        });
+                        
+                    });
+        });
+
+
+        // servirà la funczione visulizza!!!
+         
+        function visualizza(ele){
+            //capisco qualle argomento
+
+                let indiceDom=ele.indice;
+                 switch (ele.campo){
+
+                    case "teoria":
+
+                    let li=$('<li class="list-group-item visualizzatore" id="'+ele._id+'"></li>');
+                             
+                            
+                                    let card=$('<div class="card">\
+                                                <div class="card-body">'+ele.strutturaDato.testo+'</div> \
+                                                <div class="card-footer">\
+                                                    <button type="button" class="btn btn-outline-primary" data-target="'+ele._id+'">Modifica</button>\
+                                                    <button type="button" class="btn btn-outline-danger" onclick="cancellaElemento(event,this)" data-target="'+ele._id+'">Cancella</button>\
+                                                    <span class="badge badge-pill badge-primary float-rigth" >'+indiceDom+'</span>\
+                                                </div>\
+                                                </div>');
+
+                                    
+
+                                li.append(card);
+
+                                $('#ulDomande').append(li);
+
+
+                        break;
+                    case "verofalso":
+                        
+                        let livf=$('<li class="list-group-item visualizzatore" id="'+ele._id+'"></li>').
+                        append(stampaVF(ele.strutturaDato.testo,ele.strutturaDato.risposta,ele._id)).
+                        append(' <button type="button" class="btn btn-outline-primary" data-target="'+ele._id+'">Modifica</button>\
+                                                    <button type="button" class="btn btn-outline-danger" onclick="cancellaElemento(event,this)" data-target="'+ele._id+'">Cancella</button>');
+ 
+
+                        $('#ulDomande').append(livf);
+
+                        break;
+                    case 'multipla':
+                        
+                         if (ele.tipo=="semplice"){
+                             let limult=$('<li class="list-group-item visualizzatore" id="'+ele._id+'"></li>').
+                             append(stampaMultipla(ele.strutturaDato.testo,ele.strutturaDato.risposta,ele._id)).
+                        append(' <button type="button" class="btn btn-outline-primary" data-target="'+ele._id+'">Modifica</button>\
+                                                    <button type="button" class="btn btn-outline-danger" onclick="cancellaElemento(event,this)" data-target="'+ele._id+'">Cancella</button>');
+
+                             $('#ulDomande').append(limult);
+
+                         }
+
+                         if (ele.tipo=="testo"){
+                             let litesto=$('<li class="list-group-item visualizzatore" id="'+ele._id+'"></li>').
+                             append(stampaTesttoMultipla(ele.strutturaDato.testo,ele.strutturaDato.risposta,ele._id)).
+                        append(' <button type="button" class="btn btn-outline-primary" data-target="'+ele._id+'">Modifica</button>\
+                                                    <button type="button" class="btn btn-outline-danger" onclick="cancellaElemento(event,this)" data-target="'+ele._id+'">Cancella</button>');
+                             
+                             $('#ulDomande').append(litesto);                            
+                         }
+
+
+                         if (ele.tipo=="sort"){
+                             let lisort=$('<li class="list-group-item visualizzatore" id="'+ele._id+'"></li>').
+                             append(stampaSort(ele.strutturaDato.testo,ele.strutturaDato.risposta,ele._id)).
+                        append(' <button type="button" class="btn btn-outline-primary" data-target="'+ele._id+'">Modifica</button>\
+                                                    <button type="button" class="btn btn-outline-danger" onclick="cancellaElemento(event,this)" data-target="'+ele._id+'">Cancella</button>');
+                             
+                             $('#ulDomande').append(lisort);  
+                             
+                             new Sortable(document.getElementById('sort1_'+ele._id), {
+                                            animation: 150,
+                                             ghostClass: 'blue-background-class'
+                                            });
+                            new Sortable(document.getElementById('sort2_'+ele._id), {
+                                            animation: 150,
+                                             ghostClass: 'blue-background-class'
+                                            });
+
+                         }
+                    
+                    
+                                         
+
+                        
+                                                
+                    break;
+                }
+                let sir=document.getElementById(ele._id);
+                                
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub,sir]);
+            
+                
+                
+
+        }
+
+
+        function cancellaElemento(event,ele){
+
+            let sendData={
+
+                    campo:datiUtili.campo,
+                    argomento:datiUtili.argomento,
+                    _id:$(ele).data('target')
+
+                    };
+
+                    options={
+                    method:'DELETE',
+                    headers:{
+                        'Content-Type':'application/json'
+                        },
+                    body:JSON.stringify(sendData)
+                }
+
+                fetch('/cancelladato',options).then((data)=>{                   
+                                return data.json();
+                                        }
+                    ).then((queryresult)=>{
+
+                        // switch case
+                        console.log(queryresult);
+                        datiUtili.datiMostrati=queryresult;
+                        //prima Svuoto
+                        $('#ulDomande').empty();
+                        // da qui perche sono le domande di teoria
+                        datiUtili.datiMostrati.map(
+                            (ele,i)=>{
+                                visualizza(ele);
+                               
+                        });
+                        
+                    });
+
+        }
+
+        </script>
+
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+                <div id="particles-js"></div>
+
+                <script src="./js/particles.js"></script>
+                <script src="./js/app.js"> </script>
+                
+            <div id="editfield" style="display:none;" >
+                
+                <div class="card card3d insert" id="inserisciTeoria">
+
+                    <form style="padding:10px;">
+                        <div class="form-group">
+                          <label for="comment" id="nomeArgomento">Comment:</label>
+                          <textarea class="form-control" rows="15" id="comment" name="text"></textarea>
+                          </div>
+                        <button class="btn btn-primary" onclick="testa(event)">Testa</button>
+                        <button class="btn btn-success" onclick="salva(event)">Salva</button>
+                    </form>
+                    <!--Script per il vero Falso-->
+                    <script>
+                            function testa(event){
+                        
+                                $('#test').empty().append($('#comment').val());
+                        
+                                let sir=document.getElementById('test');
+                                
+                                MathJax.Hub.Queue(["Typeset",MathJax.Hub,sir]);
+                        
+                                event.preventDefault();
+                        
+                            }
+                        
+                            function salva(event){
+                                let sendData={
+                                            campo:datiUtili.campo,
+                                            argomento:datiUtili.argomento,
+                                            strutturaDato:{
+                                                testo:$('#comment').val()
+                                            }
+                                    };
+                        
+                                options={
+                                            method:'POST',
+                                            headers:{
+                                                'Content-Type':'application/json'
+                                                },
+                                            body:JSON.stringify(sendData)
+                                        }
+                        
+                                        fetch('/inseriscidati',options).then((data)=>{                   
+                                                        return data.json();
+                                                                }
+                                            ).then((queryresult)=>{
+                        
+                                                     // switch case
+                                                console.log(queryresult);
+                                                datiUtili.datiMostrati=queryresult;
+                                                //prima Svuoto
+                                                $('#ulDomande').empty();
+                                                // da qui perche sono le domande di teoria
+                                                datiUtili.datiMostrati.map(
+                                                    (ele,i)=>{
+                                                        visualizza(ele);
+                                                       
+                                                });
+                        
+                                            });
+                        
+                        
+                                event.preventDefault();
+                        
+                            }
+                        
+                            
+                        
+                        
+                            </script>
+
+                </div>
+
+                <div class="card card3d insert" id="inserisciVeroFalso">
+
+                        <form style="padding:10px;">
+                            <div class="form-group">
+                              <label for="comment" id="nomeArgomentoVF">Comment:</label>
+                              <textarea class="form-control" rows="5" id="commentVF" name="text"></textarea>
+                            </div>
+                            <input type="checkbox" id="togglevf" checked data-toggle="toggle" data-on="Vero" data-off="Falso" data-onstyle="success" data-offstyle="danger" data-width="150"/>
+                            <button class="btn btn-primary" onclick="testaVF(event)">Testa</button>
+                            <button class="btn btn-success" onclick="salvaVF(event)">Salva</button>
+                        </form>
+                </div>
+             <!--Script VeroFalso-->
+                    <script>
+                        function stampaVF(testo,ris,_id){
+                            return '<div class="card text-center card3d">\
+                                        <div class="card-body">\
+                                            <p class="card-text">'+testo+'</p>\
+                                            <a href="#" class="btn btn-outline-primary btn-lg buttonRisp"\
+                                            onclick="verificaRisposta(event,this,true)" name="'+_id+'" data-risp="'+ris+'">Vero</a>\
+                                            <a href="#" class="btn btn-outline-primary btn-lg buttonRisp"\
+                                            onclick="verificaRisposta(event,this,false)" name="'+_id+'" data-risp="'+ris+'">Falso</a>\
+                                        </div>\
+                                      </div>'
+                        }
+
+                        function testaVF(event){
+                            let vf=stampaVF($('#commentVF').val(),$('#togglevf')[0].checked,'test0');                    
+                            $('#test').empty().append(vf)
+                            event.preventDefault();
+
+                        }
+
+                        function salvaVF(event){
+                                let sendData={
+                                            campo:datiUtili.campo,
+                                            argomento:datiUtili.argomento,
+                                            strutturaDato:{
+                                                testo:$('#commentVF').val(),
+                                                risposta:$('#togglevf')[0].checked
+                                            }
+                                    };
+                        
+                                options={
+                                            method:'POST',
+                                            headers:{
+                                                'Content-Type':'application/json'
+                                                },
+                                            body:JSON.stringify(sendData)
+                                        }
+                        
+                                        fetch('/inseriscidati',options).then((data)=>{                   
+                                                        return data.json();
+                                                                }
+                                            ).then((queryresult)=>{
+                        
+                                                     // switch case
+                                                console.log(queryresult);
+                                                datiUtili.datiMostrati=queryresult;
+                                                //prima Svuoto
+                                                $('#ulDomande').empty();
+                                                // da qui perche sono le domande di teoria
+                                                datiUtili.datiMostrati.map(
+                                                    (ele,i)=>{
+                                                        visualizza(ele);
+                                                       
+                                                });
+                        
+                                            });
+                        
+                        
+                                event.preventDefault();
+                        
+                            }
+
+
+
+                        function verificaRisposta(event,el,valore){
+
+                                            let rif=$(el).data('risp');
+                                            //se ho indovinato la risposta
+                                            let elements=$('.buttonRisp[name="'+$(el).attr("name")+'"]');
+                                            
+                                            if (rif){
+                                            
+                                                if(valore==rif){                
+                                                
+                                                    $(el).addClass('disabled').removeClass('btn-outline-primary')
+                                                        .addClass('btn-success animated rubberBand');
+                                                
+
+
+                                                  $(elements[1]).addClass('disabled').removeClass('btn-outline-primary')
+                                                    .addClass('btn-outline-danger');
+                                                    audioSuccess.play();
+                                                
+                                                    }else{
+                                                    
+                                                    
+                                                    $(el).addClass('disabled').removeClass('btn-outline-primary')
+                                                    .addClass('btn-danger animated shake');
+                                                    
+                                                    $(elements[0]).addClass('disabled').removeClass('btn-outline-primary')
+                                                    .addClass('btn-outline-success ');
+                                                    
+                                                    audioIncorrect.play();
+                                                    }
+                                            }else{
+
+                                                if(valore==rif){                
+                                                
+                                                    $(el).addClass('disabled').removeClass('btn-outline-primary')
+                                                    .addClass('btn-success animated rubberBand');
+                                                
+                                                    $(elements[0]).addClass('disabled').removeClass('btn-outline-primary')
+                                                    .addClass('btn-outline-danger');
+                                                
+                                                    audioSuccess.play();
+                                                }else{
+                                                
+                                                    $(el).addClass('disabled').removeClass('btn-outline-primary')
+                                                    .addClass('btn-danger animated shake');
+                                                
+                                                    $(elements[1]).addClass('disabled').removeClass('btn-outline-primary')
+                                                    .addClass('btn-outline-success');
+                                                
+                                                    audioIncorrect.play();
+                                                
+                                            }
+
+                                            }
+                                            event.preventDefault();
+                                            }
+
+                    
+                    </script>
+                    
+                    <div class="insert" id="inserisciMultipla">
+
+                    <!--Tab Menu-->
+                        <ul class="nav nav-tabs" role="tablist">
+                               <li class="nav-item">
+                                 <a class="nav-link active" href="#multipla" role="tab" data-toggle="tab">Multipla</a>
+                               </li>
+                               <li class="nav-item">
+                                 <a class="nav-link" href="#multiplaTesto" role="tab" data-toggle="tab">Testo</a>
+                               </li>
+                               <li class="nav-item">
+                                 <a class="nav-link" href="#sort" role="tab" data-toggle="tab">Sort</a>
+                               </li>
+                             </ul>
+                        <!--Tab Content-->
+                      <div class="tab-content">
+
+                        <div class="card card3d tab-pane fade in active show" id="multipla" role="tabpanel">
+
+                               <form style="padding:10px;">
+                                   <div class="form-group">
+                                     <label class="labelArgomento" for="commentMultiplo" id="nomeArgomento">Comment:</label>
+                                     <textarea class="form-control" rows="5" id="commentMultiplo" name="text"></textarea>
+                                   </div>
+                                   <div class="form-group row">
+                                        <label for="example-number-input" class="col-4 col-form-label">Risposte</label>
+                                        <div class="col-6">
+                                          <input class="form-control " type="number" value="4" id="numeroscelte" onchange="modificanumerorisposte(event,this)">
+                                        </div>
+                            
+                                    </div>
+                                    <ul class="list-group" id="scelte">
+                                            <li class="list-group-item">
+                                                <div class="form-group row text-center" style>
+
+                                                     <textarea class="form-control inputscelta col-8" rows="1" name="text"></textarea>
+                                                     <div class="col-4" style="align-items:center; align-content:center;">
+                                                            <input type="checkbox" class="toggleMultiplo" data-toggle="toggle" data-on="Vero" data-off="Falso" data-onstyle="success" data-offstyle="danger" data-width="100"/>
+                                                     </div>
+                                                    
+                                                </div>
+
+                                            </li>
+                                            <li class="list-group-item">
+
+                                               <div class="form-group row text-center" style>
+
+                                                     <textarea class="form-control inputscelta col-8" rows="1" name="text"></textarea>
+                                                     <div class="col-4" style="align-items:center; align-content:center;">
+                                                            <input type="checkbox" class="toggleMultiplo" data-toggle="toggle" data-on="Vero" data-off="Falso" data-onstyle="success" data-offstyle="danger" data-width="100"/>
+                                                     </div>
+                                                    
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                    <div class="form-group row text-center" style>
+
+                                                            <textarea class="form-control inputscelta col-8" rows="1" name="text"></textarea>
+                                                            <div class="col-4" style="align-items:center; align-content:center;">
+                                                                   <input type="checkbox" class="toggleMultiplo" data-toggle="toggle" data-on="Vero" data-off="Falso" data-onstyle="success" data-offstyle="danger" data-width="100"/>
+                                                            </div>
+                                                           
+                                                       </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                    <div class="form-group row text-center" style>
+
+                                                            <textarea class="form-control inputscelta col-8" rows="1" name="text"></textarea>
+                                                            <div class="col-4" style="align-items:center; align-content:center;">
+                                                                   <input type="checkbox" class="toggleMultiplo" data-toggle="toggle" data-on="Vero" data-off="Falso" data-onstyle="success" data-offstyle="danger" data-width="100"/>
+                                                            </div>
+                                                           
+                                                       </div>
+                                            </li>
+                                          </ul>
+                                          
+                                 
+                                   <button class="btn btn-primary" onclick="testaMultipla(event,this)">Testa</button>
+                                   <button class="btn btn-success" onclick="salvaMultipla(event)">Salva</button>
+                               </form>
+                            </div><!--Chiude il card 3D-->
+
+                            <div class="card card3d tab-pane fade" id="multiplaTesto" role="tabpanel">
+
+                                    <form style="padding:10px;">
+                                        <div class="form-group">
+                                         <textarea class="form-control" rows="2" id="testoMultiplaTesto" name="text"></textarea>
+
+                                          <label class="labelArgomento" for="commentMultiplaTesto">Comment:</label>
+                                          <textarea class="form-control" rows="3" id="commentMultiplaTesto" name="text"></textarea>
+                                        </div>
+                                        <div class="form-group" id="testoTest">
+                                             
+                                 
+                                         </div>
+                                    </form>
+
+                                   <button class="btn btn-primary" onclick="testaTesto(event)">Testa</button>
+                                   <button class="btn btn-success" onclick="salvaTesto(event)">Salva</button>
+                            </div>
+                            
+                            <!--Script MultiploTesto-->
+                            <script>
+                                function toggola(event, e){
+                                        
+                                    let stato=$(e).data('valore');
+
+                                    switch (stato){
+                                        case "nullo":
+                                        $(e).data('valore',"giusto").removeClass('btn-primary').addClass('btn-success');
+
+                                        break;
+                                        case "giusto":
+                                        $(e).data('valore',"sbagliato").removeClass('btn-success').addClass('btn-danger');
+                                        break;
+                                        case "sbagliato":
+                                        $(e).data('valore',"nullo").removeClass('btn-danger').addClass('btn-primary');
+                                        break;
+                                        default:
+                                        break;
+                                    }
+                                    
+                                }
+
+                                function testaTesto(event){
+                                    
+                                    // devo produrre testo ed array
+                                    let testo =$('#testoMultiplaTesto').val();
+                                    let arrRisp=[];
+                                    $('.affermazione').map((ind,ele)=>{
+                                       let val= $(ele).data('valore');
+                                       
+                                        arrRisp.push({
+                                                   testo:$(ele).html(),
+                                                   valore:val
+                                        });
+                                               
+                                       
+                                    });
+
+
+                                    $('#test').empty().append(stampaTesttoMultipla(testo,arrRisp,"test0"));
+
+                                }
+
+                                function salvaTesto(event){
+
+                                      // devo produrre testo ed array
+                                    let testo =$('#testoMultiplaTesto').val();
+                                    let arrRisp=[];
+                                    $('.affermazione').map((ind,ele)=>{
+                                       let val= $(ele).data('valore');
+                                       
+                                        arrRisp.push({
+                                                   testo:$(ele).html(),
+                                                   valore:val
+                                        });
+                                               
+                                       
+                                    });
+
+
+
+                            let sendData={
+                                            campo:datiUtili.campo,
+                                            argomento:datiUtili.argomento,
+                                            tipo:"testo",
+                                            strutturaDato:{
+                                                testo:testo,
+                                                risposta:arrRisp
+                                            }
+                                    };
+                        
+                                options={
+                                            method:'POST',
+                                            headers:{
+                                                'Content-Type':'application/json'
+                                                },
+                                            body:JSON.stringify(sendData)
+                                        }
+                        
+                                        fetch('/inseriscidati',options).then((data)=>{                   
+                                                        return data.json();
+                                                                }
+                                            ).then((queryresult)=>{
+                        
+                                                     // switch case
+                                                console.log(queryresult);
+                                                datiUtili.datiMostrati=queryresult;
+                                                //prima Svuoto
+                                                $('#ulDomande').empty();
+                                                // da qui perche sono le domande di teoria
+                                                datiUtili.datiMostrati.map(
+                                                    (ele,i)=>{
+                                                        visualizza(ele);
+                                                       
+                                                });
+                        
+                                            });
+                        
+                        
+                                event.preventDefault();
+
+                                }
+
+                                function stampaTesttoMultipla(testobase,arrRisposte,_id){
+
+                                    let testo='<div class="card card3d">\
+                                                <div class="card-body">\
+                                                 \<h5 class="card-title">'+testobase+'</h5>\
+                                                    <p class="card-text">';
+
+                                     for (let risp of arrRisposte){
+                                         switch (risp.valore){
+                                             case "nullo":
+                                                 testo+=risp.testo+" ";
+                                                 break;
+                                            case "giusto":
+                                                testo+='<span class="partiDiTesto" data-valore="true" name="'+_id+'" onclick="trovaRispostaDomandaTesto(event,this)">'+risp.testo+' </span>';
+                                                break;
+                                            case "sbagliato":
+                                                testo+='<span class="partiDiTesto" data-valore="false" name="'+_id+'" onclick="trovaRispostaDomandaTesto(event,this)">'+risp.testo+' </span>';
+                                                break;
+
+                                         }
+                                     }                   
+                                     testo+='<p></div> </div>';
+                                    return testo;
+
+                                }
+
+                                function trovaRispostaDomandaTesto(event,element){
+
+                                            if($(element).data('valore')==true){
+                                                 audioSuccess.play();
+                                             }else{
+                                                 audioIncorrect.play();
+                                             }
+                                             let id=$(element).attr('name');
+
+                                             $('.partiDiTesto[name='+id+']').map(
+                                                 (index, ele)=>{
+                                                     if ($(ele).data('valore')==true){
+                                                         $(ele).addClass('corretta');    
+                                                     }else{
+                                                         $(ele).addClass('nonCorretta');
+                                                     }
+
+                                                     $(ele).removeClass('partiDiTesto').attr('onclick',null);
+
+                                                 }
+                                             );
+
+                                }
+
+
+                                $('#commentMultiplaTesto').change(
+                                    function(){
+                                        $('#testoTest').empty();
+                                        let testo=$('#commentMultiplaTesto').val();
+                                        let parole=testo.split(' ');
+                                        console.log(parole);
+
+                                        parole.map((ele,ind)=>{
+                                            $('#testoTest').append('<button type="button" class="btn btn-primary affermazione" onclick="toggola(event,this)" data-valore="nullo">'+ele+'</button>');
+                                        });
+                                        $('.paroleMultiple').map((ind,ele)=>{
+                                            if( $(ele).data('valore')=="nullo"){
+
+                                            }
+
+                                        });
+                                });
+
+                            </script>
+
+                            <!--Risposta Multipla Testo-->
+                            <div class="card card3d tab-pane fade in" id="sort" role="tabpanel">
+
+                                    <form style="padding:5%">
+                                        <div class="form-group">
+                                            <label for="testoDomandaSort">Descrizione</label>
+                                             <textarea class="form-control" id="testoDomandaSort" rows="3"></textarea>
+                                       </div>
+                                        <div class="form-group text-center row">
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              <input type="text" class="col-6 form-control sortElemento"  placeholder="Inserisci il testo"/>
+                                              
+                                        </div>
+                            
+                                        <button class="btn btn-primary" onclick="testaSort(event)">Testa</button>
+                                        <button class="btn btn-success" onclick="salvaSort(event)">Salva</button>
+                                    </form>
+                                </div><!--Chiude il sort-->
+                        <script>
+
+                            let coloriSort=["list-group-item-success", 'list-group-item-secondary', 'list-group-item-info', 'list-group-item-warning', 'list-group-item-danger', 'list-group-item-primary'];
+
+                         function stampaSort(testo,arrRisp,_id){
+
+                             let text='    <div class="card text-center card3d" style="padding:5%">\
+                                                 <p id="sortDomandaTesto">'+testo+'</p>\
+                                                 <div class="row align-items-center">\
+                                                         <ul class="list-group col-6" id="sort1_'+_id+'">';
+                                                        
+                                                        arrRisp.map((ele,ind)=>{
+                                                            
+                                                            text+= '<li class="list-group-item sortdom" data-index="'+ind+'" name="'+_id+'">'+ele.domanda+'</li>';
+                                                        });
+                                                                 
+                                                        text+='</ul>\
+                                                          <ul class="list-group col-6" id="sort2_'+_id+'">';
+                                                        
+                                                        arrRisp.map((ele,ind)=>{
+                                                            text+= '<li class="list-group-item sortrisp" data-index="'+ind+'" name="'+_id+'">'+ele.risposta+'</li>';
+                                                        });
+                                                        text+='</ul>\
+                                                        <button class="btn btn-success" onclick="confrontasort(event,this)" name="'+_id+'">Confronta</button><div>';
+
+                        return text;
+
+                                                        
+                         }
+
+                         function confrontasort(event,item){
+                             audioSuccess.play();
+                             let name=$(item).attr('name');
+                             let domande=$('.sortdom[name="'+name+'"]');
+                             let risposte=$('.sortrisp[name="'+name+'"]');
+                             for (let i=0;i<domande.length;i++){
+                                 if($(domande[i]).data('index')==$(risposte[i]).data('index')){
+                                    let index=$(domande[i]).data('index');
+                                    
+                                    let colore=coloriSort[index];
+                                    $(domande[i]).addClass(colore);
+                                    $(risposte[i]).addClass(colore);
+                                 }
+                             }
+                             
+                         }
+
+                         function testaSort(event){
+                                let testo=$('#testoDomandaSort').val();
+                                let arrRisp=[];
+                                
+
+                                let domandasort;
+                                let risp;
+
+                                $('.sortElemento').map((ind,ele)=>{
+
+                                    if (ind%2==1){
+
+                                        risp=$(ele).val();
+                                     
+                                        
+                                        
+                                        arrRisp.push({
+                                             domanda:domandasort,
+                                             risposta:risp
+                                          });
+
+
+                                    }else{
+                                        domandasort=$(ele).val();
+                                      
+                                    }
+
+                                    
+                                });
+
+                                $('#test').empty().append(stampaSort(testo,arrRisp,"test0"));
+                               
+                                new Sortable(document.getElementById('sort1_test0'), {
+                                            animation: 150,
+                                             ghostClass: 'blue-background-class'
+                                            });
+                                new Sortable(document.getElementById('sort2_test0'), {
+                                            animation: 150,
+                                             ghostClass: 'blue-background-class'
+                                            });
+
+                                event.preventDefault();
+
+                         }
+
+                        function salvaSort(event){
+
+                            let testo=$('#testoDomandaSort').val();
+                                let arrRisp=[];
+                                
+
+                                let domandasort;
+                                let risp;
+
+                                $('.sortElemento').map((ind,ele)=>{
+
+                                    if (ind%2==1){
+
+                                        risp=$(ele).val();
+                                     
+                                        
+                                        
+                                        arrRisp.push({
+                                             domanda:domandasort,
+                                             risposta:risp
+                                          });
+
+
+                                    }else{
+                                        domandasort=$(ele).val();
+                                      
+                                    }
+
+                                    
+                                });
+
+
+
+                            let sendData={
+                                            campo:datiUtili.campo,
+                                            argomento:datiUtili.argomento,
+                                            tipo:"sort",
+                                            strutturaDato:{
+                                                testo:testo,
+                                                risposta:arrRisp
+                                            }
+                                    };
+                        
+                                options={
+                                            method:'POST',
+                                            headers:{
+                                                'Content-Type':'application/json'
+                                                },
+                                            body:JSON.stringify(sendData)
+                                        }
+                        
+                                        fetch('/inseriscidati',options).then((data)=>{                   
+                                                        return data.json();
+                                                                }
+                                            ).then((queryresult)=>{
+                        
+                                                     // switch case
+                                                console.log(queryresult);
+                                                datiUtili.datiMostrati=queryresult;
+                                                //prima Svuoto
+                                                $('#ulDomande').empty();
+                                                // da qui perche sono le domande di teoria
+                                                datiUtili.datiMostrati.map(
+                                                    (ele,i)=>{
+                                                        visualizza(ele);
+                                                       
+                                                });
+                        
+                                            });
+                        
+                        
+                                event.preventDefault();
+
+                        }
+                        
+                        </script>        
+
+                        </div><!--chiude il tab pannel-->
+
+                    </div><!--Questo chiude inserisciMultiplo-->
+
+                        <!--Script Multiplo-->
+                    <script>
+                        
+                        function salvaMultipla(){
+
+
+                            let arrRisp=[];
+                            $('.inputscelta').map(
+                                (ind,ele)=>{
+                                arrRisp.push({testo:$(ele).val()});
+                            });
+
+                            $('.toggleMultiplo').map(
+                                (ind,ele)=>{
+                                arrRisp[ind].valore=$(ele)[0].checked;
+                            });
+
+
+
+                            let sendData={
+                                            campo:datiUtili.campo,
+                                            argomento:datiUtili.argomento,
+                                            tipo:"semplice",
+                                            strutturaDato:{
+                                                testo:$('#commentMultiplo').val(),
+                                                risposta:arrRisp
+                                            }
+                                    };
+                        
+                                options={
+                                            method:'POST',
+                                            headers:{
+                                                'Content-Type':'application/json'
+                                                },
+                                            body:JSON.stringify(sendData)
+                                        }
+                        
+                                        fetch('/inseriscidati',options).then((data)=>{                   
+                                                        return data.json();
+                                                                }
+                                            ).then((queryresult)=>{
+                        
+                                                     // switch case
+                                                console.log(queryresult);
+                                                datiUtili.datiMostrati=queryresult;
+                                                //prima Svuoto
+                                                $('#ulDomande').empty();
+                                                // da qui perche sono le domande di teoria
+                                                datiUtili.datiMostrati.map(
+                                                    (ele,i)=>{
+                                                        visualizza(ele);
+                                                       
+                                                });
+                        
+                                            });
+                        
+                        
+                                event.preventDefault();
+
+                        }
+
+
+                        function modificanumerorisposte(event, element){
+                            let numrispo=$(element).val();
+
+                            $('#scelte').empty();
+
+                            for(let i=0;i<numrispo;i++){
+                                $('#scelte').append('<li class="list-group-item">\
+                                                    <div class="form-group row text-center" style>\
+                                                            <textarea class="form-control inputscelta col-8" rows="1" name="text"></textarea>\
+                                                            <div class="col-3" style="align-items:center; align-content:center;">\
+                                                                   <input type="checkbox" class="toggleMultiplo" data-toggle="toggle" data-on="Vero"\ data-off="Falso" data-onstyle="success" data-offstyle="danger" data-width="100"/>\
+                                                            </div>\
+                                                       </div>\
+                                            </li>');
+
+                            }
+                            $('.toggleMultiplo').bootstrapToggle()	
+                            event.preventDefault();
+                        }
+
+                        function stampaMultipla(testo,arrayRisposte,_id){
+                            
+                            let stringa=[
+                                 '<li class="list-group-item justify-content-between align-items-center senzaBordi" id="'+_id+'">',
+                                     ,'<div class="card card3d" >',
+                                         '<div class="card-body">',
+                                             '<p class="card-text">'+testo+'.</p>',
+                                         '</div>',
+                                         '<ul class="list-group" >'];
+                                            arrayRisposte.map((el,index)=>{
+                                                stringa.push('   <a href="#" name="'+_id+'" class="list-group-item list-group-item-action" data-valore="'+el.valore+'" onclick="controlloRispostaMultipla(event,this)">'+el.testo+'</a>');
+                                         });
+                                     stringa.push('</ul> </div>');
+                                
+                                return stringa.join('');
+
+                        }
+                        function testaMultipla(event,element){
+                            let testo=$('#commentMultiplo').val();
+
+                            let arrRisp=[];
+                            $('.inputscelta').map(
+                                (ind,ele)=>{
+                                arrRisp.push({testo:$(ele).val()});
+                            });
+
+                            $('.toggleMultiplo').map(
+                                (ind,ele)=>{
+                                arrRisp[ind].valore=$(ele)[0].checked;
+                            });
+
+                            let domandaMultipla=stampaMultipla(testo,arrRisp,'test0');                    
+                            $('#test').empty().append(domandaMultipla);
+                            
+                            event.preventDefault();
+
+                        }
+                        function controlloRispostaMultipla(event,ele){
+                            let nome=$(ele).attr('name');
+
+
+                            //cerco tutti i bottoni e gli ca
+                            $('.list-group-item-action[name="'+nome+'"]').map((index,item)=>{
+
+                                if ($(item).data('valore')==true){
+                                    $(item).css('border','1px solid #28a745').css('color','#28a745');
+                                
+                                }else{
+                                    $(item).css('border','1px solid #dc3545').css('color','#dc3545');
+                                }
+                                
+                            });
+                                
+                            $('.list-group-item-action[name="'+nome+'"]').attr('onclick','').unbind('click');
+                                
+                            if ($(ele).data('valore')==true){
+                                
+                                $(ele).addClass('list-group-item-success').css('color','white');
+                                audioSuccess.play();
+                                }else{
+                                $(ele).addClass('list-group-item-danger').css('color','white');
+                                audioIncorrect.play();
+                                
+                            }
+                            
+
+
+                            event.preventDefault();
+                        }
+                    </script>
+
+              <div class="line"></div>
+
+
+              <div class="card card3d"  style="min-height: 20%;">
+                <div class="card-body" id="test">
+
+                </div>               
+             </div>
+            </div>
+             <!--area di test-->
+             <div id="anteprima"></div>
+
+             <div class="line"></div>
+
+
+             <div>
+                    <ul class="list-group " id="ulDomande">
+
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                          </ul>
+                          
+             </div>
+
+            
+        </div>
+    </div>
+    
+
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        
+        let datiUtili={};
+
+
+
+        const audioSuccess=new Audio('../sound/successSE.mp3');
+        const audioIncorrect=new Audio('../sound/incorrectSE.mp3');
+        audioIncorrect.volume=0.2;
+
+        
+
+
+
+
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+
+          //all'inzio e nascosto;
+           $('#editfield').css('display','none');
+
+           new Sortable(document.getElementById('ulDomande'), {
+                            animation: 150,
+                            ghostClass: 'blue-background-class',
+                            onEnd: function (/**Event*/evt) {
+                                let sendData=[]
+                                $('.badge').map((index,ele)=>{
+                                    $(ele).html(index);
+                                    
+                                    
+
+                                });
+
+                                aggiornaDomande();
+
+                            }
+                        });
+
+
+
+                
+        });
+
+        function aggiornaDomande(){
+
+            let sendData=[];
+            $('.visualizzatore').map(
+                (ind,ele)=>{
+                    sendData.push({
+                        _id:$(ele).attr('id'),
+                        indice:ind
+                    });
+
+                }
+            );
+         //   console.log(sendData);
+
+            options={
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                        },
+                    body:JSON.stringify(sendData)
+                }
+
+                fetch('/modificaindice',options).then((data)=>{                   
+                                return data.json();
+                                        }
+                    ).then((queryresult)=>{
+
+                             // switch case
+                        console.log(queryresult);
+
+                    });
+
+
+
+        }
+    </script>
+    
+    
+           
+</body>
+
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+  
+    options={
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({ciao:'ciao'})
+    }
+
+    fetch('/api',options).then((data)=>{
+        return data.json();
+        console.log(response.json());
+    }
+    ).then((queryresult)=>{
+        console.log(queryresult);
+
+        const pods = queryresult.pods;
+        const output = pods.map((pod) => {
+        const subpodContent = pod.subpods.map(subpod =>
+            `  <img src="${subpod.img.src}" alt="${subpod.img.alt}">`
+            ).join('\n');
+            return `<h2>${pod.title}</h2>\n${subpodContent}`;
+  }).join('\n');
+   $('body').append(output);
+  //console.log(output);
+    });
+    
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+
+</body>
+</html>
+
+
+
+
+
+//visualizza elemento di testo
+
+ /*
+                               let li=$('<li class="list-group-item visualizzatore" id="'+ele._id+'"></li>');
+                             
+
+                                    let card=$('<div class="card">\
+                                                <div class="card-body">'+ele.strutturaDato.testo+'</div> \
+                                                <div class="card-footer">\
+                                                    <button type="button" class="btn btn-outline-primary" data-target="'+ele._id+'">Modifica</button>\
+                                                    <button type="button" class="btn btn-outline-danger" data-target="'+ele._id+'">Cancella</button>\
+                                                </div>\
+                                                </div>');
+
+                                    
+
+                                li.append(card);
+
+                                $('#ulDomande').prepend(li);*/
+
+
+-->

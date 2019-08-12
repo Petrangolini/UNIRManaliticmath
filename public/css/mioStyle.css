@@ -1,0 +1,145 @@
+
+
+#contenitore{
+    width:60%;
+}
+
+iframe {
+    width: 960px;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+}
+
+@media screen and (max-width: 600px) {
+  #contenitore{
+    width:100%;
+    }
+}
+#particles-js{
+    width:100vw;
+    height:100%;
+    background:rgba(0,0,0,0);
+    top:0;
+    left:0;
+    position:fixed;
+    z-index:1;
+}
+
+a, li, button, nav{
+    z-index: 2;
+}
+.senzaBordi{
+    border: none !important;
+    background-color: transparent;
+}
+.affermazione{
+    margin-left: 10px;
+}
+
+
+
+
+.card3d{
+    box-shadow: 10px 10px 5px lightgray;
+    margin-bottom:10px;
+    z-index:2;
+}
+
+.buttonRisp{
+    width: 40%; 
+    margin-left:10px;
+    margin-right:10px;
+    
+}
+.partiDiTesto{
+    /*background-color:lavender;*/  
+    position: relative; 
+}
+
+ .partiDiTesto:after {
+        position: absolute;
+        content: '';
+        height: 2px;
+		bottom: -4px; 
+
+
+        margin: 0 auto;
+		  left: 0;
+        right: 0;
+		  width: 50%;
+		  background: green;
+		  
+		  -o-transition:.5s;
+  		  -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+    }
+	 
+
+	 /* optional hover classes used with anmiation */
+	  .partiDiTesto:hover:after {
+		  width: 80%;
+		  background: orange;
+    }
+
+    .corretta, .nonCorretta{
+        position: relative; 
+
+    }
+    .corretta:after{
+         position: absolute;
+        content: '';
+        height: 2px;
+		bottom: -4px; 
+
+
+        margin: 0 auto;
+		  left: 0;
+        right: 0;
+		  width: 80%;
+		  background: green;
+		  
+		  -o-transition:.5s;
+  		  -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+
+
+    }
+
+    .nonCorretta:after{
+         position: absolute;
+        content: '';
+        height: 2px;
+		bottom: -4px; 
+
+
+        margin: 0 auto;
+		  left: 0;
+        right: 0;
+		  width: 80%;
+		  background: red;
+		  
+		  -o-transition:.5s;
+  		  -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+
+
+    }
+
+
+.blue-background-class{
+  opacity: .6;
+  background: aliceblue;
+}
+
+.visualizzatore{
+         background-color: transparent !important; 
+     border: none !important;
+}
+.insert{display:none;}
